@@ -1,41 +1,6 @@
 ### [link up a level../](../)
 
-# Action Geometry
-
-Self replicating business using Geometron system
-
-## Elements of Action Geometry
-
-- this repo along with the code to replicate all of it and fork it
-- the website www.actiongeometry.com
-- the website www.actiongeometry.org
-- local web page connected to a physical place based on streets and towns
-- local web page connected to physical place based on water(the watershed network)
-- local physical web server using a raspberry pi placed in a public place where elements of system can be shared
-- physical repository of shapes, where shapes that are made can be dropped and found for other people to use
-- symbol/index.html optimized for MOBILE FIRST creation of shapes using the basic AG shape set which can then be shared and replicated using physical shape est
-- geometron stations where physical shapes are sold in public spaces
-- shopify website with click-to-buy of plastic shape set for Action Geometry paper constructions
-- methodology for construction of symbols with shape set
-- symbol cards with urls written on them and symbols made with shape set symbol cards are distributed by:
-    - mailing them as postcards
-    - placing them in public places like libraries, bookstores and coffeeshops
-    - giving them away to people to sell
-- eventbrite page for teaching classes:
-    - sacred geometry with AG
-    - geometron: symbolic programming and STEM education
-    - geometron technical deep dive: learn to code with geometron
-    - how to build out the business: you replicate the whole system, make money on it
-- geometron cards can be sold, mailed, dropped, given away or displayed
-- facebook ads, google ads, instagram ads
-- markers, non-permanent waste objects with spray painted or paint penned symbols which can be used to help people find physical repos of shapes, cards, and other art tools 
-- custom laser cut business: use geometron to make shapes, cut them and give or sell them to people, these can be jewlery, keychains, coasters, stencils, logo swag, and AG shapes
-- hand bound Action Geometry books which are distributed in libraries, bookstores, coffee shops, art venues and on the Street
-- process by which people are trained on makerspace laser cutters and make their own shapes
-- process by which new people go get shapes made in bulk on ponoko to sell
-- Geometron "station" where things are publicly distributed, which can have point of sale for taking credit card payments both for classes and shapes and cards and books, signs, markers, local urls, and local nearby repositories for physical things which are shared in communion with other participants in geometron
-- the Spiral: a symbol, a concept, a path, a set of shapes, a method of construction, math.  Spiral has math turned on.  spiral is the basic card you can send. Spiral is the proto-thing, a prototype of a self replicating thing which can copy itself in a wide variety of ways, and can be boiled down to a very simple thing: math.  Math other than numbers as the basis of value.  Spiral cards and spiral shapes are used as currency.
-
+# Geometron Thing
 
 [![](iconsymbols/geometronthing.svg)](index.html)
 
