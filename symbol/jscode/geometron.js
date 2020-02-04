@@ -505,12 +505,13 @@ function GVM(x0,y0,unit,theta0,canvas2d,width,height,bytecode) {
             this.ctx.arc(this.x, this.y, this.ctx.lineWidth, 0, 2 * Math.PI);
             this.ctx.fill();	
             this.ctx.closePath();
+            this.ctx.stroke();   
             this.svgString += "<circle cx=\"";
             this.svgString += Math.round(this.x).toString();
             this.svgString += "\" cy = \"";
             this.svgString += Math.round(this.y).toString();
-            this.svgString += "\" r = \"" + this.ctx.lineWidth.toString() + "\" stroke = \"" + this.ctx.strokeStyle + "\" stroke-width = \"" + (this.ctx.lineWidth).toString() + "\" ";
-            this.svgString += "fill = \"" + this.ctx.strokeStyle + "\" />\n";	
+            this.svgString += "\" r = \"" + (this.ctx.lineWidth).toString() + "\" stroke = \"" + this.ctx.strokeStyle + "\" stroke-width = \"" + this.ctx.lineWidth.toString() + "\" ";
+            this.svgString += "fill = \"" + "none" + "\" />\n";	
         }
         if(address == 0341) {
             this.ctx.beginPath();
