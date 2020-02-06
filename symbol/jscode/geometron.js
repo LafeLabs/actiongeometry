@@ -179,6 +179,7 @@ function GVM(x0,y0,unit,theta0,canvas2d,width,height,bytecode) {
         this.svgString = "<svg width=\"" + this.width.toString() + "\" height=\"" + this.height.toString() + "\" viewbox = \"0 0 " + this.width.toString() + " " + this.height.toString() + "\"  xmlns=\"http://www.w3.org/2000/svg\">\n";
         this.svgString += "<!--<json></json>-->";
         this.action(0300);
+        this.action(0321);
         this.actionSequence(glyph);
         this.svgString += "</svg>";
 
@@ -233,7 +234,7 @@ function GVM(x0,y0,unit,theta0,canvas2d,width,height,bytecode) {
         if(action < 040) {
             this.action(action);
         }
-        if(action > 037 && action <= 01777 && action != this.address) {
+        if(action > 037 && action <= 01777 && action != this.address && action != 0177) {
             var glyphSplit = currentGlyph.split(",");
             currentGlyph = "";
             for(var index = 0;index < glyphSplit.length;index++){
@@ -424,9 +425,6 @@ function GVM(x0,y0,unit,theta0,canvas2d,width,height,bytecode) {
         if(address == 0314) {
             this.scaleFactor = 3;
         }
-        if(address == 0315) {
-            this.scaleFactor = 1.1755705;
-        }
         if(address == 0316) {
             this.scaleFactor = 5;
         }
@@ -505,13 +503,12 @@ function GVM(x0,y0,unit,theta0,canvas2d,width,height,bytecode) {
             this.ctx.arc(this.x, this.y, this.ctx.lineWidth, 0, 2 * Math.PI);
             this.ctx.fill();	
             this.ctx.closePath();
-            this.ctx.stroke();   
             this.svgString += "<circle cx=\"";
             this.svgString += Math.round(this.x).toString();
             this.svgString += "\" cy = \"";
             this.svgString += Math.round(this.y).toString();
-            this.svgString += "\" r = \"" + (this.ctx.lineWidth).toString() + "\" stroke = \"" + this.ctx.strokeStyle + "\" stroke-width = \"" + this.ctx.lineWidth.toString() + "\" ";
-            this.svgString += "fill = \"" + "none" + "\" />\n";	
+            this.svgString += "\" r = \"" + this.ctx.lineWidth.toString() + "\" stroke = \"" + this.ctx.strokeStyle + "\" stroke-width = \"" + (this.ctx.lineWidth).toString() + "\" ";
+            this.svgString += "fill = \"" + this.ctx.strokeStyle + "\" />\n";	
         }
         if(address == 0341) {
             this.ctx.beginPath();

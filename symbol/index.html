@@ -47,6 +47,7 @@
 
 <div id = "margin">            
     <div id = "linkdiv">
+<!--
         <a href = "scroll.html">
             <img style = "width:50px;" src = "iconsymbols/scroll.svg"/>
         </a>
@@ -56,27 +57,28 @@
         <a href = "../">
             <img style = "width:50px;" src = "iconsymbols/uplink.svg"/>
         </a>
+
         <a href = "shapetableeditor.html">
             <img style = "width:50px;" src = "iconsymbols/table.svg"/>
         </a>               
         <a href = "styleeditor.html">
             <img style = "width:50px;" src = "iconsymbols/style.svg"/>
         </a>
-        <a href = "symbolfeed.html">
-            <img style = "width:50px;" src = "iconsymbols/feed.svg"/>
-        </a>
         <a href = "setup.html">
             <img style = "width:50px;" src = "iconsymbols/setup.svg"/>
         </a>    
-
+        
         <img id = "modebutton" class = "button" style = "width:50px;background-color:#00ff00" src = "iconsymbols/cursor.svg"/>
-
-
+        
+        -->
+        <a href = "symbolfeed.html">
+            <img style = "width:50px;" src = "iconsymbols/feed.svg"/>
+        </a>
         <img id = "savebutton" class = "button" style = "width:50px;" src = "iconsymbols/save.svg"/>
     </div>    
     <div id = "spelldiv">
         <canvas id = "spellcanvas"></canvas>
-        <input id = "spellinput"/>
+<!--        <input id = "spellinput"/>-->
     </div>
     <div id = "controldiv">
 
@@ -109,7 +111,7 @@ else{
 //GVM(x0,y0,unit,theta0,canvas2d,width,height,bytecode)
 
 
-var newGVM = new GVM(0.98*squareWidth,0.98*squareWidth,0.96*squareWidth,-Math.PI/2,document.getElementById("maincanvas"),squareWidth,squareWidth,hypercube);
+var newGVM = new GVM(0.5*squareWidth,0.5*squareWidth,0.25*squareWidth,-Math.PI/2,document.getElementById("maincanvas"),squareWidth,squareWidth,hypercube);
 
 newGVM.unicodemode = false;
 //newGVM.unicodemode = true;
@@ -137,7 +139,7 @@ var invisibleGVM = new GVM(0.98*invisibleWidth,0.98*invisibleWidth,0.96*invisibl
 
 
 
-var spellGVM = new GVM(10,100,50,-Math.PI/2,document.getElementById("spellcanvas"),200,200,hypercube);
+var spellGVM = new GVM(100,100,50,-Math.PI/2,document.getElementById("spellcanvas"),marginWidth,squareWidth,hypercube);
 spellGVM.importbytecode(font);
 spellGVM.importbytecode(keyboard);
 
@@ -170,10 +172,11 @@ document.getElementById("actioninput").onkeydown = function(a) {
  
     }
 
-    spellGVM.spellGlyph(newGVM.glyph,spellGVM);    
+//    spellGVM.spellGlyph(newGVM.glyph,spellGVM);    
+    spellGlyph(newGVM.glyph);
     savejson();
-    document.getElementById("spellinput").value = currentjson.glyph;
-    document.getElementById("spellinput").style.width = 0.8*currentjson.glyph.length.toString() + "em";
+  //  document.getElementById("spellinput").value = currentjson.glyph;
+//    document.getElementById("spellinput").style.width = 0.8*currentjson.glyph.length.toString() + "em";
 
 }
 
@@ -186,56 +189,37 @@ mode = 0;//0 is action, 1, is spelling, 2 is stack.
 
 actionmode = "action";//"spelling","stack"
 
-document.getElementById("modebutton").onclick = function(){
-    modeswitch();
-}
 
-function modeswitch(){
-    mode++;
-    mode = mode%3;
-    if(mode == 0){
-        document.getElementById("modebutton").src = "iconsymbols/cursor.svg";
-    }
-    if(mode == 1){
-        document.getElementById("modebutton").src = "iconsymbols/abcfont.svg";
-    }
-    if(mode == 2){
-        document.getElementById("modebutton").src = "iconsymbols/abcstack.svg";
-    }
-    document.getElementById("actioninput").select();
-}
 
 
 document.getElementById("actioninput").onkeypress = function(a) {
+
     var charCode = a.keyCode || a.which;
 
+    if(mode == 0){
+        localCursorAction = parseInt(newGVM.hypercube[charCode],8);     
+    }    
+    if(mode == 1){
+        localCursorAction = charCode + 01000;     
+    }    
+    if(mode == 2){
+        localCursorAction = charCode;     
+    }    
 
-    if(charCode != 015){
-        if(mode == 0){
-            localCursorAction = parseInt(newGVM.hypercube[charCode],8);    
-        }    
-        if(mode == 1){
-            localCursorAction = charCode + 01000;     
-        }    
-        if(mode == 2){
-            localCursorAction = charCode;     
-        }    
+    newGVM.cursorAction(localCursorAction);   
+//    spellGVM.spellGlyph(newGVM.glyph);    
+    spellGlyph(newGVM.glyph);
+    this.value = "";
+    newGVM.saveGlyph();
 
-        newGVM.cursorAction(localCursorAction);   
-        spellGVM.spellGlyph(newGVM.glyph);    
-        this.value = "";
-        newGVM.saveGlyph();
-
-        savejson();
-        document.getElementById("spellinput").value = currentjson.glyph;
-        document.getElementById("spellinput").style.width = 0.8*currentjson.glyph.length.toString() + "em";    
-    }
-
+    savejson();
+//    document.getElementById("spellinput").value = currentjson.glyph;
+  //  document.getElementById("spellinput").style.width = 0.8*currentjson.glyph.length.toString() + "em";
 
 }
 
 
-buttonSize = marginWidth/8;
+buttonSize = marginWidth/9;
 
 function loadcontrolbuttons(){
     
@@ -264,8 +248,8 @@ function loadcontrolbuttons(){
             newGVM.saveGlyph();
             savejson();
             
-            document.getElementById("spellinput").value = currentjson.glyph;
-            document.getElementById("spellinput").style.width = 0.8*currentjson.glyph.length.toString() + "em";
+         //   document.getElementById("spellinput").value = currentjson.glyph;
+         //   document.getElementById("spellinput").style.width = 0.8*currentjson.glyph.length.toString() + "em";
         }
 
 
@@ -324,24 +308,25 @@ httpc.onreadystatechange = function() {
         currentjson = JSON.parse(this.responseText);
         currentstyle = currentjson.style;
         newGVM.style = currentstyle;
-        newGVM.canvas2d.width = currentjson.width;
-        newGVM.canvas2d.height = currentjson.height;
-        newGVM.width = currentjson.width;
-        newGVM.height = currentjson.height;
-        newGVM.x0 = currentjson.x0rel*newGVM.width;
-        newGVM.y0 = currentjson.y0rel*newGVM.height;    
-        newGVM.unit = currentjson.unitrel*newGVM.width;    
-        newGVM.theta0 = currentjson.theta0;
-        newGVM.glyph = currentjson.glyph + ",0207,";    
+//        newGVM.canvas2d.width = currentjson.width;
+ //       newGVM.canvas2d.height = currentjson.height;
+  //      newGVM.width = currentjson.width;
+//        newGVM.height = currentjson.height;
+  //      newGVM.x0 = currentjson.x0rel*newGVM.width;
+//        newGVM.y0 = currentjson.y0rel*newGVM.height;    
+ //       newGVM.unit = currentjson.unitrel*newGVM.width;    
+  //      newGVM.theta0 = currentjson.theta0;
+        newGVM.glyph = currentjson.glyph + "0207,";    
 
         spellGVM.importbytecode(currentjson.shapes);
         newGVM.importbytecode(currentjson.shapes);
         invisibleGVM.importbytecode(currentjson.shapes);
 
         newGVM.drawGlyph(newGVM.glyph);
-        spellGVM.spellGlyph(newGVM.glyph);
-        document.getElementById("spellinput").value = currentjson.glyph;
-        document.getElementById("spellinput").style.width = 0.8*currentjson.glyph.length.toString() + "em";
+//        spellGVM.spellGlyph(newGVM.glyph);
+        spellGlyph(newGVM.glyph);
+//        document.getElementById("spellinput").value = currentjson.glyph;
+  //      document.getElementById("spellinput").style.width = 0.8*currentjson.glyph.length.toString() + "em";
         document.getElementById("backgroundimage").src = currentjson.backgroundimage;
         if(currentjson.backgroundimage.length >  1) {
             document.getElementById("backgroundimage").style.display = "block";
@@ -349,8 +334,9 @@ httpc.onreadystatechange = function() {
         else{
             document.getElementById("backgroundimage").style.display = "none";
         }
-
-        loadcontrolbuttons();
+        if(landscape == false){
+            loadcontrolbuttons();
+        }
     }
 };
 httpc.open("GET", "fileloader.php?filename=data/currentjson.txt", true);
@@ -359,6 +345,7 @@ httpc.send();
 
 document.getElementById("actioninput").select();
 
+/*
 document.getElementById("spellinput").onchange = function() {
     currentjson.glyph = this.value;
     newGVM.glyph = currentjson.glyph + ",0207,";    
@@ -367,6 +354,7 @@ document.getElementById("spellinput").onchange = function() {
     savejson();
 
 }
+*/
 
 function savejson(){
     
@@ -386,6 +374,30 @@ function savejson(){
     httpc.send("data="+encodeURIComponent(JSON.stringify(currentjson,null,"  "))+"&filename=data/currentjson.txt");//send text to filesaver.php
 
 }
+
+    
+function spellGlyph(glyph){
+    
+    spellGVM.ctx.clearRect(0,0,spellGVM.width,spellGVM.height);
+    spellGVM.action(0300);
+    var localGlyph = "";
+    var glyphArray = glyph.split(",");
+    var glyphLength = glyphArray.length;
+    for(var index = 0; index < glyphArray.length; index++){
+        if(glyphArray[index].length > 1){
+            var localAddress = parseInt(glyphArray[index],8);
+            if(localAddress < 01000){
+                localAddress += 01000;
+            }
+            spellGVM.action(localAddress);
+            if(spellGVM.x > marginWidth - 2*spellGVM.unit){
+               spellGVM.x = spellGVM.unit;
+               spellGVM.y += 1.5*spellGVM.unit;
+            }
+        }
+    }
+}
+
 </script>
 <style>
 body{
@@ -410,11 +422,11 @@ body{
 }
 #spelldiv{
     width:100%;
-    height:80px;
     overflow:scroll;
     position:absolute;
     top:90px;
     left:0px;
+    bottom:0px;
 }
 #spellinput{
     font-family:courier;
@@ -425,7 +437,7 @@ body{
     bottom:1em;
     left:0px;
     right:0px;
-    top:200px;
+    top:300px;
 }
 #linkdiv{
     width:100%;
@@ -440,6 +452,7 @@ body{
 }
 #spellcanvas{
     border:solid;
+    background-color:#f0f0f0;
 }
 #actioninput{
     width:1em;
