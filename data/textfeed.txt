@@ -1,7 +1,9 @@
 {
     "text": [
         "some text",
-        "☕ "
+        "☕ ",
+        "shopify",
+        "lafelabs"
     ],
     "src": [
         "iconsymbols/geometronthing.svg",
@@ -12,6 +14,8 @@
         "../",
         "https://en.wikipedia.org/wiki/Tensegrity",
         "editor.php",
-        "map.html"
+        "map.html",
+        "shopify/",
+        "lafelabs/"
     ]
 }
