@@ -32,6 +32,7 @@ EGO DEATH:
     <a href = "fonteditor.html">fonteditor.html</a>
     <a href = "setup.html">setup.html</a>
     <a href = "keyboardeditor.html">keyboardeditor.html</a>
+    <a href = "agkeyboard.html">agkeyboard.html</a>
     <a href = "bookmark.html">bookmark.html</a>
     <a href = "symbolfeed.html">symbolfeed.html</a>
     <a href = "hypercube.html">hypercube.html</a>
@@ -57,6 +58,7 @@ EGO DEATH:
     <div class = "html file">map.html</div>
     <div class = "html file">fonteditor.html</div>
     <div class = "html file">keyboardeditor.html</div>
+    <div class = "html file">agkeyboard.html</div>
     <div class = "html file">bookmark.html</div>
     <div class = "html file">pageeditor.html</div>
     <div class = "html file">setup.html</div>
