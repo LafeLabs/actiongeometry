@@ -71,7 +71,7 @@
         <img id = "modebutton" class = "button" style = "width:50px;background-color:#00ff00" src = "iconsymbols/cursor.svg"/>
         
         -->
-        <a href = "symbolfeed.html">
+        <a href = "symbolfeed.html" id ="feedlink">
             <img style = "width:50px;" src = "iconsymbols/feed.svg"/>
         </a>
         <img id = "savebutton" class = "button" style = "width:50px;" src = "iconsymbols/save.svg"/>
@@ -150,7 +150,7 @@ document.getElementById("actioninput").onkeydown = function(a) {
     var charCode = a.keyCode || a.which;
 
     if(charCode == 015) {
-        modeswitch();
+        document.getElementById("savebutton").click();  
     }
 
     if(charCode == 010) {
@@ -195,16 +195,7 @@ actionmode = "action";//"spelling","stack"
 document.getElementById("actioninput").onkeypress = function(a) {
 
     var charCode = a.keyCode || a.which;
-
-    if(mode == 0){
-        localCursorAction = parseInt(newGVM.hypercube[charCode],8);     
-    }    
-    if(mode == 1){
-        localCursorAction = charCode + 01000;     
-    }    
-    if(mode == 2){
-        localCursorAction = charCode;     
-    }    
+    localCursorAction = parseInt(newGVM.hypercube[charCode],8); 
 
     newGVM.cursorAction(localCursorAction);   
 //    spellGVM.spellGlyph(newGVM.glyph);    
@@ -286,7 +277,7 @@ document.getElementById("savebutton").onclick = function() {
     }
 
     invisibleGVM.drawGlyph(cleanGlyph);
-    httpc.send("data="+encodeURIComponent(invisibleGVM.pngcode(invisibleGVM).substring(22))+"&filename=symbolfeed/symbol" + timestamp +  ".png");//send text to filesaver.php
+//    httpc.send("data="+encodeURIComponent(invisibleGVM.pngcode(invisibleGVM).substring(22))+"&filename=symbolfeed/symbol" + timestamp +  ".png");//send text to filesaver.php
 
         //need to inject json data here ... 
     
