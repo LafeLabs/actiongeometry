@@ -164,12 +164,26 @@ document.getElementById("actioninput").onkeydown = function(a) {
     }
 
     if(charCode == 046){
-        //up arrow: prev symbol
-
+        //up arrow: home
+        var tempGlyph = "";
+        var glyphArray = newGVM.glyph.split(",");
+        for(var index = 0;index < glyphArray.length;index++){
+            if(glyphArray[index]  != "0207" && glyphArray[index].length>0){
+                tempGlyph += glyphArray[index] + ",";
+            }
+        }
+        newGVM.glyph = "0207," + tempGlyph;
     }
     if(charCode == 050){
-        //down arrow: next symbol
- 
+        //down arrow: end
+        var tempGlyph = "";
+        var glyphArray = newGVM.glyph.split(",");
+        for(var index = 0;index < glyphArray.length;index++){
+            if(glyphArray[index]  != "0207" && glyphArray[index].length>0){
+                tempGlyph += glyphArray[index] + ",";
+            }
+        }
+        newGVM.glyph = tempGlyph + "0207,"; 
     }
 
 //    spellGVM.spellGlyph(newGVM.glyph,spellGVM);    
