@@ -318,6 +318,7 @@ httpc.onreadystatechange = function() {
   //      newGVM.theta0 = currentjson.theta0;
         newGVM.glyph = currentjson.glyph + "0207,";    
 
+        spellGVM.style = currentstyle;
         spellGVM.importbytecode(currentjson.shapes);
         newGVM.importbytecode(currentjson.shapes);
         invisibleGVM.importbytecode(currentjson.shapes);
