@@ -139,7 +139,7 @@ var invisibleGVM = new GVM(0.98*invisibleWidth,0.98*invisibleWidth,0.96*invisibl
 
 
 
-var spellGVM = new GVM(100,100,50,-Math.PI/2,document.getElementById("spellcanvas"),marginWidth,squareWidth,hypercube);
+var spellGVM = new GVM(100,100,50,-Math.PI/2,document.getElementById("spellcanvas"),marginWidth,squareWidth*2,hypercube);
 spellGVM.importbytecode(font);
 spellGVM.importbytecode(keyboard);
 
@@ -396,7 +396,7 @@ function spellGlyph(glyph){
                 localAddress += 01000;
             }
             spellGVM.action(localAddress);
-            if(spellGVM.x > marginWidth - 2*spellGVM.unit){
+            if(spellGVM.x > marginWidth - 1.5*spellGVM.unit){
                spellGVM.x = spellGVM.unit;
                spellGVM.y += 1.5*spellGVM.unit;
             }
