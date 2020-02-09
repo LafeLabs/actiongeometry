@@ -250,6 +250,7 @@ function loadcontrolbuttons(){
         var newg = new GVM(1,buttonSize - 1,buttonSize-2,-Math.PI/2,newcan,buttonSize,buttonSize,hypercube);
         newg.importbytecode(currentjson.shapes);
         newg.importbytecode(font);
+        newg.style = currentjson.style;
 
         newg.drawGlyph("0300,0" + (currentjson.controlbuttons[index] + 01000).toString(8) + ",",newg);
 
@@ -502,6 +503,8 @@ body{
     cursor:pointer;
     float:left;
     margin:2px 2px 2px 2px;
+    border:solid;
+    border-width:0.2px;
 }
 #invisiblecanvas{
     display:none;
