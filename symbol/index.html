@@ -91,6 +91,7 @@
 landscape = false;
 
 if(innerWidth > innerHeight){
+    //laptop and desktop computers, raspberry pi
     squareWidth = innerHeight;
     document.getElementById("margin").style.width = (innerWidth - squareWidth).toString() + "px";
     document.getElementById("margin").style.height = innerHeight.toString() + "px";
@@ -100,6 +101,8 @@ if(innerWidth > innerHeight){
     landscape = true;
 }
 else{
+    
+    //mobile and vertical tablet
     squareWidth = innerWidth;
     document.getElementById("margin").style.height = (innerHeight - squareWidth).toString() + "px";
     document.getElementById("margin").style.width = (innerWidth).toString() + "px";
@@ -110,8 +113,14 @@ else{
 
 //GVM(x0,y0,unit,theta0,canvas2d,width,height,bytecode)
 
+if(landscape){
+    var newGVM = new GVM(0.5*squareWidth,0.5*squareWidth,0.25*squareWidth,-Math.PI/2,document.getElementById("maincanvas"),squareWidth,squareWidth,hypercube);    
+}
+else{
+    var newGVM = new GVM(0.25*squareWidth,0.25*squareWidth,0.125*squareWidth,-Math.PI/2,document.getElementById("maincanvas"),0.5*squareWidth,0.5*squareWidth,hypercube);    
+}
 
-var newGVM = new GVM(0.5*squareWidth,0.5*squareWidth,0.25*squareWidth,-Math.PI/2,document.getElementById("maincanvas"),squareWidth,squareWidth,hypercube);
+
 
 newGVM.unicodemode = false;
 //newGVM.unicodemode = true;
@@ -224,13 +233,13 @@ document.getElementById("actioninput").onkeypress = function(a) {
 }
 
 
-buttonSize = marginWidth/9;
+buttonSize = squareWidth/8;
 
 function loadcontrolbuttons(){
     
     for(var index = 0;index < currentjson.controlbuttons.length; index++) {    
         var newcan = document.createElement("canvas");
-        document.getElementById("controldiv").appendChild(newcan);
+        document.getElementById("square").appendChild(newcan);
         newcan.classList.add("button");
         //GVM(x0,y0,unit,theta0,canvas2d,width,height,bytecode)
         var newg = new GVM(1,buttonSize - 1,buttonSize-2,-Math.PI/2,newcan,buttonSize,buttonSize,hypercube);
@@ -455,6 +464,9 @@ body{
 }
 #maincanvas{
     border:solid;
+    float:left;
+        margin:2px 2px 2px 2px;
+
 }
 #spellcanvas{
     border:solid;
@@ -475,6 +487,8 @@ body{
 }
 .button{
     cursor:pointer;
+    float:left;
+    margin:2px 2px 2px 2px;
 }
 #invisiblecanvas{
     display:none;
