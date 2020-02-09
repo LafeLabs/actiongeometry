@@ -147,8 +147,13 @@ var invisibleGVM = new GVM(0.98*invisibleWidth,0.98*invisibleWidth,0.96*invisibl
 
 
 
+if(landscape){
+    var spellGVM = new GVM(100,100,50,-Math.PI/2,document.getElementById("spellcanvas"),marginWidth,squareWidth*2,hypercube);    
+}
+else{
+    var spellGVM = new GVM(100,100,50,-Math.PI/2,document.getElementById("spellcanvas"),squareWidth*2,marginWidth,hypercube);    
+}
 
-var spellGVM = new GVM(100,100,50,-Math.PI/2,document.getElementById("spellcanvas"),marginWidth,squareWidth*2,hypercube);
 spellGVM.importbytecode(font);
 spellGVM.importbytecode(keyboard);
 
