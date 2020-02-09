@@ -173,6 +173,7 @@ httpc.onreadystatechange = function() {
         currentjson = JSON.parse(this.responseText);
         newg.importbytecode(currentjson.shapes);
         newg.style.line0 = 1;
+        newg.style = currentjson.style;
         symbolg.importbytecode(currentjson.shapes);
         redraw();
 
