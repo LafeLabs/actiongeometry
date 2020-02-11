@@ -25,5 +25,23 @@
         "text": "lafelabs",
         "href": "lafelabs/",
         "src": ""
+    },
+    {
+        "x": 0.12171837708830549,
+        "y": -0.16945107398568018,
+        "w": 0.986873508353222,
+        "angle": 0,
+        "text": "shopify",
+        "href": "shopify/",
+        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581454306.svg"
+    },
+    {
+        "x": 0.34725536992840095,
+        "y": 0.45823389021479716,
+        "w": 0.6813842482100239,
+        "angle": 0,
+        "text": "shopify",
+        "href": "shopify/",
+        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581454396.svg"
     }
 ]

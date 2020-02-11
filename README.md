@@ -1,66 +1,15 @@
-###
+# Geometron Network Page Replicator
 
-# Action Geometry: Self Replicating Geometry
-
-
-## Elements of Action Geometry
-
-- this repo along with the code to replicate all of it and fork it
-- the business system comprising the selling of the following goods and also services:
-    - books(Action Geometry)
-    - postcards with symbols
-    - shape sets with carrying pockets
-    - markers with symbols and urls: things that can be left out in rain with permanent markers that link physical with virtual
-    - stickers to modify keyboards to have shape language, AG instance of geometron
-    - fully modified keyboards made with spray stencils
-    - custom installation of a geometron server: raspberry pi, custom domain(s) for Street and Watershed
-    - Class in Sacred Geometry taught with geometron shapes and shared symbol factory
-    - class in geometron code as STEM activity to be introduced to computer programming
-    - class in Geoemetron Business system, how to replicate this whole system for profit
-- the website www.actiongeometry.com
-- the website www.actiongeometry.org
-- local web page connected to a physical place based on streets and towns
-- local web page connected to physical place based on water(the watershed network)
-- local physical web server using a raspberry pi placed in a public place where elements of system can be shared
-- physical repository of shapes, where shapes that are made can be dropped and found for other people to use
-- symbol/index.html optimized for MOBILE FIRST creation of shapes using the basic AG shape set which can then be shared and replicated using physical shape est
-- geometron stations where physical shapes are sold in public spaces
-- shopify website with click-to-buy of plastic shape set for Action Geometry paper constructions
-- methodology for construction of symbols with shape set
-- symbol cards with urls written on them and symbols made with shape set symbol cards are distributed by:
-    - mailing them as postcards
-    - placing them in public places like libraries, bookstores and coffeeshops
-    - giving them away to people to sell
-- eventbrite page for teaching classes:
-    - sacred geometry with AG
-    - geometron: symbolic programming and STEM education
-    - geometron technical deep dive: learn to code with geometron
-    - how to build out the business: you replicate the whole system, make money on it
-- geometron cards can be sold, mailed, dropped, given away or displayed
-- facebook ads, google ads, instagram ads
-- markers, non-permanent waste objects with spray painted or paint penned symbols which can be used to help people find physical repos of shapes, cards, and other art tools 
-- custom laser cut business: use geometron to make shapes, cut them and give or sell them to people, these can be jewlery, keychains, coasters, stencils, logo swag, and AG shapes
-- hand bound Action Geometry books which are distributed in libraries, bookstores, coffee shops, art venues and on the Street
-- process by which people are trained on makerspace laser cutters and make their own shapes
-- process by which new people go get shapes made in bulk on ponoko to sell
-- Geometron "station" where things are publicly distributed, which can have point of sale for taking credit card payments both for classes and shapes and cards and books, signs, markers, local urls, and local nearby repositories for physical things which are shared in communion with other participants in geometron
-- the Spiral: a symbol, a concept, a path, a set of shapes, a method of construction, math.  Spiral has math turned on.  spiral is the basic card you can send. Spiral is the proto-thing, a prototype of a self replicating thing which can copy itself in a wide variety of ways, and can be boiled down to a very simple thing: math.  Math other than numbers as the basis of value.  Spiral cards and spiral shapes are used as currency.
-
-
+Link back to this page:
 [![](iconsymbols/geometronthing.svg)](index.html)
-
-
-### [Scroll:](scroll.html)
-
+Scroll:
 [![](iconsymbols/scroll.svg)](scroll.html)
-
-### [Edit Scroll:](pageeditor.html)
-
+[Edit Scroll:](pageeditor.html)
 [![](iconsymbols/edit.svg)](pageeditor.html)
 
 What you see in the edit screen(after clicking the edit icon) here is "markdown", which is language which allows people to publish things on the web without learning more complex languages. Hit return twice to get a paragraph break.  Copy the syntax you see here to get links and images and headings. You can look up markdown ([cheat sheet](https://www.markdownguide.org/cheat-sheet/), [detailed guide](https://daringfireball.net/projects/markdown/syntax), [wikipedia entry](https://en.wikipedia.org/wiki/Markdown)) for more syntax.  Also embedding <span style = "color:red;font-family:courier;">HTML</span> works if you know that.  
 
-[Geometron Symbols](symbol/): 
+[Geometron Symbol factory](symbol/): 
 
 [![](iconsymbols/geometron.svg)](symbol/)
 
@@ -69,6 +18,8 @@ What you see in the edit screen(after clicking the edit icon) here is "markdown"
 [![](iconsymbols/fork.svg)](fork.html)
 
 Enter the name of the new page you want to create and click through the links to get to a new page one level down from this one.  Repeat this in the "new map" field to make a new map, which is a stack of images, symbols, words and links in a general web page layout.  Each Geometron page has a scroll and a map.  The "main" page can be either a scroll or map.  To see the map, click on its symbol, and to edit it click the edit icon from the map screen. The default map shows what the symbols mean that are used for editing.  To see the current map value go to [data/currentmap.txt](data/currentmap.txt).  Also, this JSON file can be edited directly using editor.php(see link below).  Inventory is used to track inventory at a given factory or page.  
+
+For new forks of this page, you would usually delete all the text seen here and put something custom to that new page appropriate for whatever it represents.  Page forks can represent any kind of "thing" in the most generalized sense: places, ideas, people, objects, actions, collections of other things, etc.  This network of web elements can map to all the linguistic elements we use to describe our universe.  It is a universal language, based on geometry(the ultimate language of the Universe as we find it outside our own minds).
 
 [Map](map.html):
 
@@ -94,7 +45,9 @@ The Github repository from all this is generated is:
 
 To run the replicator, copy the code in [this file](https://raw.githubusercontent.com/LafeLabs/thing/master/php/replicator.txt) or use the [local copy of the file here](php/replicator.txt) to a file called replicator.php in whatever directory on the server you want to copy Geometron.  Run that file by pointing your browser to [your server url]/replicator.php, then click on the link you see.  After that you can click on the "fork" icon and navigate down to "symbol/" and click on that replicator as well to replicate the Geometron symbol creation page.
 
-To start a new Geometron web server get free web hosting at [infinityfree.net](https://infinityfree.net/) or [000webhost](https://www.000webhost.com/) or buy a domain and get paid hosting at a company like [dreamhost](https://www.dreamhost.com/), or get a [Raspberry Pi](https://www.raspberrypi.org/), install [Apache and php](https://www.raspberrypi.org/documentation/remote-access/web-server/apache.md) on it and do the same copying of replicator.php.  Build a Raspberry Pi terminal with a screen, keyboard, mouse and power supply(this can be bought as a kit or built up from a pi motherboard and found components from other systems), put it on a local WiFi network, figure out the IP address of it, and link to that from local networks to make physically local Geometron Page only available on local wifi. 
+To start a new Geometron web server get free web hosting at [infinityfree.net](https://infinityfree.net/) or [000webhost](https://www.000webhost.com/) or buy a domain and get paid hosting at a company like [dreamhost](https://www.dreamhost.com/).  In general, domains should be based on physical places of a shared nature--not people or companies or organizations, but places like an area along a street, a neighborhood, a public park(the Street Network), or part of an aquatic landmark like a stream or lake(the Watershed Network).  
+
+For physically local networking, get a [Raspberry Pi](https://www.raspberrypi.org/), install [Apache and php](https://www.raspberrypi.org/documentation/remote-access/web-server/apache.md) on it and do the same copying of replicator.php.  Build a Raspberry Pi terminal with a screen, keyboard, mouse and power supply(this can be bought as a kit or built up from a pi motherboard and found components from other systems), put it on a local WiFi network, figure out the IP address of it, and link to that from local networks to make physically local Geometron Page only available on local wifi. To see the IP address in a web browser when running this on a Raspberry pi, click on [pi.php](pi.php) to see it displayed as a link.  Add this link as needed to get from known local domains to physically local server.
 
 To get to web directory, copy replicator.php, run it, change permissions, and get your local IP address use the following commands from the terminal:
 <pre>

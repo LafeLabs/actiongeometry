@@ -1,5 +1,3 @@
-# Geometron: Geometric Meta-Language
-
 <div style = "font-size:3em;font-family:times;text-align:center;width:100%">
     <span style = "color:red">&#x0393;</span>
     <span style = "color:orange">&#x03b5;</span>
@@ -12,6 +10,31 @@
     <span style = "color:yellow">&#x03bd;</span>
 </div>
 
+
+# Action Geometry
+
+
+## Elements that are replicated in this Scroll:
+
+- shape set printed out and laminated(svg's to print)
+- shape set purchased from shopify store(link to shop to buy)
+- shape set purchased at a physical Geometron station(contact info of someone with a station)
+- shape set laser cut using scrap at a makerspace(svg and png)
+- shape set fabricated in bulk at ponoko(svg with two layers/colors, link to ponoko)
+- book consisting of
+    - physically bound volume from 1/4 size from 11x8.5 pages with spine sewn and duct taped, each volume is 12 pages each of which is 1/4 of a page so 3 total pieces of paper, front cover is basic shapes colored in and call number and title(Action Geometry), inside of front cover is NO COPYRIGHT, location and date, url(s)
+    - each of the 7 basic shapes
+    - how to construct the pentagram/pentagon
+    - how to construct the hexagon/star of David
+    - how to construct the spiral of golden triangles
+    - how to construct the golden spiral of squares
+    - an svg for each page in the book, including the symbols for the shapes and for the symmetries and scales, and spelling in glyph language of constructions
+- keyboard(s) with symbols for actions on it
+- server(s) where symbols are made and shared
+- physical station(s) where geometry is shared
+- mobile interface for symbol editor
+- understanding of methods: symmetry and scale, symbol glyphs and actions, how to construct symbols, how to use symbols, relationship with these constructions and other concepts from classical geometry and artistic and symbolic applications of geometry, methods of making post cards
+- physical post cards with symbols that link to web locations with same symbol connected by photograph of cards and urls printed on cards
 
 Geometron is a language for building symbolic languages.  It is mostly written in itself, that is, the symbols by which we interact with Geometron are made up of symbols which are also drawn with Geometron.  Geometron is a little bit like some of the "teaching" languages like Logo or "art" languages like Processing, but unlike other computer languages for constructing art, Geometron does not work with "code" written in English or some other human language or numbers which drive most computer language.  Geometron works directly with geometric actions and combinations of them, without direct reference to numbers.  Rather than numbers, Geometron works with scales like the Golden Ratio and symmetries like "four fold", "five fold" and "six fold" symmetry.
 
