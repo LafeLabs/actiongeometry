@@ -1,12 +1,22 @@
-### [link up a level../](../)
+###
 
-# Action Geometry
+# Action Geometry: Self Replicating Geometry
 
-Self replicating business using Geometron system
 
 ## Elements of Action Geometry
 
 - this repo along with the code to replicate all of it and fork it
+- the business system comprising the selling of the following goods and also services:
+    - books(Action Geometry)
+    - postcards with symbols
+    - shape sets with carrying pockets
+    - markers with symbols and urls: things that can be left out in rain with permanent markers that link physical with virtual
+    - stickers to modify keyboards to have shape language, AG instance of geometron
+    - fully modified keyboards made with spray stencils
+    - custom installation of a geometron server: raspberry pi, custom domain(s) for Street and Watershed
+    - Class in Sacred Geometry taught with geometron shapes and shared symbol factory
+    - class in geometron code as STEM activity to be introduced to computer programming
+    - class in Geoemetron Business system, how to replicate this whole system for profit
 - the website www.actiongeometry.com
 - the website www.actiongeometry.org
 - local web page connected to a physical place based on streets and towns
