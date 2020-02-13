@@ -13,6 +13,9 @@ What you see in the edit screen(after clicking the edit icon) here is "markdown"
 
 [![](iconsymbols/geometron.svg)](symbol/)
 
+
+[link to scroll describing symbol factory](symbol/scroll.html)
+
 [Create a fork](fork.html):
 
 [![](iconsymbols/fork.svg)](fork.html)

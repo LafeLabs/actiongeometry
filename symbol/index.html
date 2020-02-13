@@ -74,6 +74,10 @@
         <a href = "symbolfeed.html" id ="feedlink">
             <img style = "width:50px;" src = "iconsymbols/feed.svg"/>
         </a>
+        <a href = "../" id ="homelink">
+            <img style = "width:50px;" src = "iconsymbols/homesymbol.svg"/>
+        </a>
+
         <img id = "savebutton" class = "button" style = "width:50px;" src = "iconsymbols/save.svg"/>
     </div>    
     <div id = "spelldiv">
@@ -114,7 +118,7 @@ else{
 //GVM(x0,y0,unit,theta0,canvas2d,width,height,bytecode)
 
 if(landscape){
-    var newGVM = new GVM(0.5*squareWidth,0.5*squareWidth,0.25*squareWidth,-Math.PI/2,document.getElementById("maincanvas"),squareWidth,squareWidth,hypercube);    
+    var newGVM = new GVM(0.5*squareWidth,0.5*squareWidth,0.35*squareWidth,-Math.PI/2,document.getElementById("maincanvas"),squareWidth,squareWidth,hypercube);    
 }
 else{
     var newGVM = new GVM(0.25*squareWidth,0.25*squareWidth,0.125*squareWidth,-Math.PI/2,document.getElementById("maincanvas"),0.5*squareWidth,0.5*squareWidth,hypercube);    
