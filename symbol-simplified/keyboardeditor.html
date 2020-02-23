@@ -9,7 +9,6 @@
     <script src="jscode/geometron.js"></script>
     <script src="data/hypercube.js"></script>
     <script src="data/keyboard.js"></script>
-    <script src="data/font.js"></script>
 
 <!--
     this is how shape table editor should be, totally focused on 3 rows, with symbols in a tablet that is automatically saved
@@ -36,9 +35,6 @@
 <a style = "width:100px;" href = "index.html">
     <img src = "iconsymbols/geometron.svg"/>
 </a>
-        <a href = "map.html">
-            <img style = "width:50px;" src = "../iconsymbols/map.svg"/>
-        </a>
 
 <script>
 
@@ -53,7 +49,6 @@ document.getElementById("keyboardbox").appendChild(newcan);
 
 var newg = new GVM(0.125*keywidth,keywidth + 0.125*keywidth,keywidth,-Math.PI/2,newcan,keywidth*16.5,keywidth*5,hypercube);
 
-newg.importbytecode(font);
 newg.importbytecode(keyboard);
 
 function redraw() {

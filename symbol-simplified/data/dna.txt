@@ -20,9 +20,11 @@
         "feed.svg",
         "geometron.svg",
         "help.svg",
+        "keyboard.svg",
         "loadsymbol.svg",
         "save.svg",
-        "scroll.svg"
+        "scroll.svg",
+        "shapeset.svg"
     ],
     "data": [
         "currentjson.txt",

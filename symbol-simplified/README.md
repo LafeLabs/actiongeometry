@@ -16,8 +16,11 @@
 
 # Geometry in this place physically here, with words about this factory, url, links etc
 
-
 [fork.html](fork.html)
+
+![](iconsymbols/shapeset.svg)
+
+![](iconsymbols/keyboard.svg)
 
 symmetries
 
