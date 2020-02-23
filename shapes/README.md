@@ -1,6 +1,8 @@
 ### [link up a level../](../)
 
-# Geometron Thing
+# Shapes
+
+![](../symbol/symbolfeed/symbol1581636383.svg)
 
 [![](iconsymbols/geometronthing.svg)](index.html)
 

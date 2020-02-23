@@ -32,7 +32,7 @@
         "w": 0.23269689737470167,
         "angle": 0,
         "text": "shopify",
-        "href": "shopify/",
+        "href": "book/",
         "src": "http://localhost:8000/symbol/symbolfeed/symbol1581636478.svg"
     },
     {
@@ -42,7 +42,7 @@
         "angle": 0,
         "text": "shopify",
         "href": "symbol/",
-        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581635801.svg"
+        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581975200.svg"
     },
     {
         "x": 0.5346062052505967,
@@ -50,7 +50,7 @@
         "w": 0.23269689737470167,
         "angle": 0,
         "text": "shopify",
-        "href": "shopify/",
+        "href": "cards/",
         "src": "http://localhost:8000/symbol/symbolfeed/symbol1581636510.svg"
     },
     {
@@ -59,7 +59,7 @@
         "w": 0.23269689737470167,
         "angle": 0,
         "text": "shopify",
-        "href": "shopify/",
+        "href": "shapes/",
         "src": "http://localhost:8000/symbol/symbolfeed/symbol1581636383.svg"
     },
     {
@@ -68,7 +68,7 @@
         "w": 0.35918854415274465,
         "angle": 0,
         "text": "shopify",
-        "href": "shopify/",
+        "href": "server/",
         "src": "http://localhost:8000/symbol/symbolfeed/symbol1581636143.svg"
     },
     {
@@ -77,7 +77,7 @@
         "w": 0.35918854415274465,
         "angle": 0,
         "text": "shopify",
-        "href": "shopify/",
+        "href": "keyboard/",
         "src": "http://localhost:8000/symbol/symbolfeed/symbol1581636020.svg"
     }
 ]

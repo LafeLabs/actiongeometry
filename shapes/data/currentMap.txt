@@ -1,83 +1,11 @@
 [
     {
-        "x": 0.1658711217183771,
-        "y": 0.6789976133651552,
-        "w": 0.986873508353222,
-        "angle": 0,
-        "text": "shopify",
-        "href": "shopify/",
-        "src": ""
-    },
-    {
-        "x": 0.010739856801909307,
-        "y": 0.00477326968973747,
-        "w": 0.12410501193317422,
-        "angle": 0,
-        "text": "",
-        "href": "symbol/",
-        "src": "iconsymbols/geometron.svg"
-    },
-    {
-        "x": 0.2541766109785203,
-        "y": 0.5548926014319809,
-        "w": 0.986873508353222,
-        "angle": 0,
-        "text": "lafelabs",
-        "href": "lafelabs/",
-        "src": ""
-    },
-    {
-        "x": 0.8066825775656324,
-        "y": -0.00477326968973747,
-        "w": 0.23269689737470167,
-        "angle": 0,
-        "text": "shopify",
-        "href": "shopify/",
-        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581636478.svg"
-    },
-    {
-        "x": -0.021479713603818614,
-        "y": 0.14558472553699284,
-        "w": 0.29236276849642007,
-        "angle": 0,
-        "text": "shopify",
-        "href": "symbol/",
-        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581635801.svg"
-    },
-    {
-        "x": 0.5346062052505967,
-        "y": 0.02386634844868735,
-        "w": 0.23269689737470167,
-        "angle": 0,
-        "text": "shopify",
-        "href": "shopify/",
-        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581636510.svg"
-    },
-    {
-        "x": 0.7601431980906921,
-        "y": 0.38902147971360385,
-        "w": 0.23269689737470167,
-        "angle": 0,
-        "text": "shopify",
-        "href": "shopify/",
-        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581636383.svg"
-    },
-    {
-        "x": 0.315035799522673,
-        "y": 0.2458233890214797,
+        "x": -0.025059665871121718,
+        "y": 0.032219570405727926,
         "w": 0.35918854415274465,
         "angle": 0,
         "text": "shopify",
-        "href": "shopify/",
-        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581636143.svg"
-    },
-    {
-        "x": 0.18377088305489261,
-        "y": -0.00477326968973747,
-        "w": 0.35918854415274465,
-        "angle": 0,
-        "text": "shopify",
-        "href": "shopify/",
-        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581636020.svg"
+        "href": "../",
+        "src": "http://localhost:8000/symbol/symbolfeed/symbol1581637014.svg"
     }
 ]
