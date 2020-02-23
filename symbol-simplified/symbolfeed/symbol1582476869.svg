@@ -1,5 +1,6 @@
-{
-  "glyph": "",
+<svg width="838" height="838" viewbox = "0 0 838 838"  xmlns="http://www.w3.org/2000/svg">
+<!--<json>{
+  "glyph": "0336,0336,0225,0236,0330,0236,0331,0331,0236,0333,0236,0332,0333,0236,0331,0331,0332,0332,0236,0332,0333,0236,",
   "shapes": [
     "0220:0305,0350,0311,",
     "0221:0220,0362,0203,0334,0334,0334,0334,0203,0334,0334,0334,0336,0203,0363,0334,0334,0334,0337,",
@@ -119,4 +120,11 @@
     214,
     215
   ]
-}
+}</json>--><circle cx="419" cy = "419" r = "73.32499999999999" stroke = "#000000" stroke-width = "3" fill = "none" />
+<circle cx="419" cy = "346" r = "73.32499999999999" stroke = "#000000" stroke-width = "3" fill = "none" />
+<circle cx="419" cy = "492" r = "73.32499999999999" stroke = "#000000" stroke-width = "3" fill = "none" />
+<circle cx="483" cy = "456" r = "73.32499999999999" stroke = "#000000" stroke-width = "3" fill = "none" />
+<circle cx="483" cy = "382" r = "73.32499999999999" stroke = "#000000" stroke-width = "3" fill = "none" />
+<circle cx="355" cy = "456" r = "73.32499999999999" stroke = "#000000" stroke-width = "3" fill = "none" />
+<circle cx="355" cy = "382" r = "73.32499999999999" stroke = "#000000" stroke-width = "3" fill = "none" />
+</svg>
