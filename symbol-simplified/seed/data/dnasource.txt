@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/LafeLabs/srwp/master/data/dna.txt
+https://raw.githubusercontent.com/LafeLabs/actiongeometry/master/symbol-simplified/seed/data/dna.txt

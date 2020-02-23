@@ -7,7 +7,7 @@ if(file_exists("data/dnasource.txt")){
     $olddnasourceexists = true;
 }
 else{
-    $dnaurl = "https://raw.githubusercontent.com/LafeLabs/srwp/master/data/dna.txt";
+    $dnaurl = "https://raw.githubusercontent.com/LafeLabs/actiongeometry/master/symbol-simplified/seed/data/dna.txt";
 }
 
 $baseurl = explode("data/",$dnaurl)[0];
