@@ -1,5 +1,7 @@
 [link back to symbol editor](index.html)
 
+[editor.php](editor.php)
+
 <div style = "font-size:3em;font-family:times;text-align:center;width:100%">
     <span style = "color:red">&#x0393;</span>
     <span style = "color:orange">&#x03b5;</span>

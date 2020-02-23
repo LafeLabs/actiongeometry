@@ -5,15 +5,14 @@
         "fork.html",
         "index.html",
         "keyboardeditor.html",
-        "pageeditor.html",
         "scroll.html",
+        "scrolleditor.html",
         "setup.html",
         "styleeditor.html",
         "symbolfeed.html"
     ],
     "javascript": [
-        "geometron.js",
-        "mapfactory.js"
+        "geometron.js"
     ],
     "iconsymbols": [
         "delete.svg",
