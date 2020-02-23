@@ -14,7 +14,6 @@
 
 # Action Geometry
 
-
 symmetries
 
 scales

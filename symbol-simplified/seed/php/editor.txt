@@ -1,8 +1,6 @@
  <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-
  <!-- 
 PUBLIC DOMAIN, NO COPYRIGHTS, NO PATENTS.
 
@@ -27,12 +25,8 @@ EGO DEATH:
     <a href = "text2php.php">text2php.php</a>
     <a href = "index.html">index.html</a>
     <a href = "scroll.html">scroll.html</a>
+    <a href = "scrolleditor.html">scrolleditor.html</a>
     <a href = "fork.html">fork.html</a>
-    <a href = "setup.html">setup.html</a>
-    <a href = "keyboardeditor.html">keyboardeditor.html</a>
-    <a href = "agkeyboard.html">agkeyboard.html</a>
-    <a href = "symbolfeed.html">symbolfeed.html</a>
-    <a href = "keyboardeditor.html">keyboardeditor.html</a>
     <a href = "dnagenerator.php">dnagenerator.php</a>
 </div>
 <div id = "namediv"></div>
@@ -41,18 +35,9 @@ EGO DEATH:
 
     <div class = "html file">index.html</div>
     <div class = "html file">fork.html</div>
+    <div class = "html file">scrolleditor.html</div>
     <div class = "html file">scroll.html</div>
-    <div class = "html file">keyboardeditor.html</div>
-    <div class = "html file">agkeyboard.html</div>
-    <div class = "html file">pageeditor.html</div>
-    <div class = "html file">setup.html</div>
-    <div class = "html file">styleeditor.html</div>
-    <div class = "html file">symbolfeed.html</div>
-
     <div class = "markdown file">README.md</div>
-
-    <div class = "javascript file">jscode/geometron.js</div>
-
 
 <?php 
 
@@ -71,9 +56,17 @@ EGO DEATH:
 
     foreach($datafiles as $value){
         if($value{0} != "."){
-            echo "<div class = \"javascript file\">data/";
-            echo $value;
-            echo "</div>\n";
+            
+            if($value == "dnasource.txt"){
+                echo "<div class = \"bytecode file\">data/";
+                echo $value;
+                echo "</div>\n";
+            }
+            else{
+                echo "<div class = \"javascript file\">data/";
+                echo $value;
+                echo "</div>\n";
+            }
         }
     }
 
@@ -109,30 +102,15 @@ for(var index = 0;index < files.length;index++){
         };
         httpc.open("GET", "fileloader.php?filename=" + currentFile, true);
         httpc.send();
-        if(this.classList[0] == "css"){
-            editor.getSession().setMode("ace/mode/css");
-            document.getElementById("namediv").style.color = "yellow";
-            document.getElementById("namediv").style.borderColor = "yellow";
-        }
         if(this.classList[0] == "html"){
             editor.getSession().setMode("ace/mode/html");
             document.getElementById("namediv").style.color = "#0000ff";
             document.getElementById("namediv").style.borderColor = "#0000ff";
         }
-        if(this.classList[0] == "scrolls"){
-            editor.getSession().setMode("ace/mode/html");
-            document.getElementById("namediv").style.color = "#87CEEB";
-            document.getElementById("namediv").style.borderColor = "#87CEEB";
-        }
         if(this.classList[0] == "javascript"){
             editor.getSession().setMode("ace/mode/javascript");
             document.getElementById("namediv").style.color = "#ff0000";
             document.getElementById("namediv").style.borderColor = "#ff0000";
-        }
-        if(this.classList[0] == "bytecode"){
-            editor.getSession().setMode("ace/mode/text");
-            document.getElementById("namediv").style.color = "#654321";
-            document.getElementById("namediv").style.borderColor = "#654321";
         }
         if(this.classList[0] == "php"){
             editor.getSession().setMode("ace/mode/php");
@@ -149,7 +127,11 @@ for(var index = 0;index < files.length;index++){
             document.getElementById("namediv").style.color = "aqua";
             document.getElementById("namediv").style.borderColor = "aqua";
         }
-
+        if(this.classList[0] == "bytecode"){
+            editor.getSession().setMode("ace/mode/text");
+            document.getElementById("namediv").style.color = "#654321";
+            document.getElementById("namediv").style.borderColor = "#654321";
+        }
         document.getElementById("namediv").innerHTML = currentFile;
     }
 }
