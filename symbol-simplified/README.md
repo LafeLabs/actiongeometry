@@ -1,3 +1,5 @@
+[link up a level](../)
+
 [link back to symbol editor](index.html)
 
 [editor.php](editor.php)
